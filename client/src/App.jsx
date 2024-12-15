@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { Button } from "./components/ui/button";
-
+import Auth from "./auth";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <Button>click</Button>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/auth" element={<Auth />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
